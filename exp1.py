@@ -1,7 +1,5 @@
 import csv
-import os
 
-desktop_path = os.path.expanduser("~/Desktop")
 csv_file_path = os.path.join(desktop_path, r"C:\Users\arshb\Desktop\diabetes.csv")
 
 data = []
