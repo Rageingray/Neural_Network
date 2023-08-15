@@ -1,11 +1,8 @@
-import csv
-
-csv_file_path = os.path.join(desktop_path, r"C:\Users\arshb\Desktop\diabetes.csv")
-
 data = []
-with open(csv_file_path, "r") as csv_file:
-    csv_reader = csv.reader(csv_file)
-    for row in csv_reader:
+with open('diabetes.csv', 'r') as file:
+    lines = file.readlines()
+    for line in lines[0:500]: 
+        row = line.strip().split(',')
         data.append(row)
 
 column_widths = [max(len(str(item)) for item in col) for col in zip(*data)]
